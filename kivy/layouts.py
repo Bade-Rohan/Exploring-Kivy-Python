@@ -3,6 +3,9 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.scrollview import ScrollView
+from kivy.uix.textinput import TextInput
+from kivy.properties import ObjectProperty
+
 class BoxLayoutExample(BoxLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -39,6 +42,13 @@ class GridLayoutExample(GridLayout):
             b.font_name = "../fonts/Lcd.ttf"
             b.font_size = 50
             self.add_widget(b)
+
+class TextInputExample(BoxLayout):
+    search_input = ObjectProperty()
+    def search_location(self):
+        print(f"The user searched for {self.search_input.text}.")
+
+        
 
 class LayoutApp(App):
     pass
