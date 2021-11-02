@@ -47,6 +47,11 @@ class TextInputExample(BoxLayout):
     search_input = ObjectProperty()
     def search_location(self):
         print(f"The user searched for {self.search_input.text}.")
+    def show_remarks(self):
+        print(f"Currently No Remarks!")
+        
+        
+        
 
         
 
